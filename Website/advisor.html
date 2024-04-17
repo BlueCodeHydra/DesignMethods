@@ -7,8 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background: #800000;">
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="mainpage.html">Main</a>
+            <a href="CourseManagement.html">Courses</a>
+            <a href="Appointment.html">Appointments</a>
+            <a href="Advisor.html">Advisor</a>
+            <a href="Security.html">Security</a>
+            <a href="alert.html">Alerts</a>
+        </div>
+    </div>
+
     <h1>Advisor</h1>
-    <!-- Content specific to the Advisor page -->
-    <script src="js/scripts.js"></script>
+    <form id="advisorForm">
+        <label for="advisorName">Advisor Name:</label>
+        <input type="text" id="advisorName" name="advisorName"><br>
+        
+        <label for="meetingDate">Date:</label>
+        <input type="date" id="meetingDate" name="meetingDate"><br>
+        
+        <label for="meetingTime">Time:</label>
+        <input type="time" id="meetingTime" name="meetingTime"><br>
+        
+        <label for="meetingReason">Reason for Meeting:</label>
+        <input type="text" id="meetingReason" name="meetingReason"><br>
+        
+        <button type="button" onclick="submitAdvisorForm()">Submit</button>
+    </form>
+    <script src="js/advisorAppointment.js"></script>
 </body>
 </html>

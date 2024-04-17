@@ -5,15 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alert Page</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        window.onload = function() {
-            alert("This is an alert page!");
-        };
-    </script>
 </head>
+
+<div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+        <a href="mainpage.html">Main</a>
+        <a href="CourseManagement.html">Courses</a>
+        <a href="Appointment.html">Appointments</a>
+        <a href="Advisor.html">Advisor</a>
+        <a href="Security.html">Security</a>
+        <a href="alert.html">Alerts</a>
+    </div>
+</div>
+
 <body style="background: #800000;">
     <h1>Alert Page</h1>
-    <p>This page is here to show an alert.</p>
-    <!-- Other content if needed -->
+    <ul id="crimeReportsList"></ul>
+    <script src="js/securityAlert.js"></script>
+    <script>
+        window.onload = function() {
+            // Retrieve crime reports from localStorage
+            const crimeReports = JSON.parse(localStorage.getItem('crimeReports')) || [];
+            
+            // Select the list element
+            const list = document.getElementById('crimeReportsList');
+
+            // Populate the list with crime reports
+            crimeReports.forEach(report => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `Type: ${report.crimeType}, Location: ${report.location}, Time: ${report.time}`;
+                list.appendChild(listItem);
+            });
+        };
+    </script>
 </body>
 </html>
