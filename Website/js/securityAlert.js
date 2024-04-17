@@ -19,3 +19,20 @@ function reportCrime() {
     // Navigate to alert page
     window.location.href = 'alert.html';
 }
+
+window.onload = function() {
+    // Retrieve crime reports from localStorage
+    const crimeReports = JSON.parse(localStorage.getItem('crimeReports')) || [];
+
+    // Select the list element for security alerts
+    const list = document.getElementById('crimeReportsList');
+
+    // Populate the list with crime reports
+    crimeReports.forEach(report => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `Type: ${report.crimeType}, Location: ${report.location}, Time: ${report.time}`;
+        list.appendChild(listItem);
+    });
+};
+
+

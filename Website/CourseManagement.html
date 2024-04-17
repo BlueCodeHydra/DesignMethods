@@ -6,22 +6,38 @@
     <title>Course Management</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-        <a href="mainpage.html">Main</a>
-        <a href="CourseManagement.html">Courses</a>
-        <a href="Appointment.html">Appointments</a>
-        <a href="Advisor.html">Advisor</a>
-        <a href="Security.html">Security</a>
-        <a href="alert.html">Alerts</a>
-    </div>
-</div>
-
 <body style="background: #800000;">
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="mainpage.html">Main</a>
+            <a href="CourseManagement.html">Courses</a>
+            <a href="Appointment.html">Appointments</a>
+            <a href="Advisor.html">Advisor</a>
+            <a href="Security.html">Security</a>
+            <a href="alert.html">Alerts</a>
+        </div>
+    </div>
+
     <h1>Course Management</h1>
-    <!-- Content specific to the Advisor page -->
-    <script src="js/scripts.js"></script>
+    <form id="courseForm">
+        <label for="action">Action (Add/Drop):</label>
+        <select id="action" name="action">
+            <option value="add">Add</option>
+            <option value="drop">Drop</option>
+        </select><br>
+
+        <label for="courseTitle">Course Title:</label>
+        <input type="text" id="courseTitle" name="courseTitle"><br>
+
+        <label for="courseSchedule">Course Schedule:</label>
+        <input type="text" id="courseSchedule" name="courseSchedule"><br>
+
+        <button type="button" onclick="submitCourse()">Submit</button>
+    </form>
+
+    <div id="courseEntries"></div>
+
+    <script src="js/courseManagement.js"></script>
 </body>
 </html>

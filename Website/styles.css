@@ -135,7 +135,7 @@ h1 {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #000000;
 }
 
 
@@ -162,4 +162,28 @@ h1 {
 .alert-box ul {
     list-style-type: none; /* Remove default list styling */
     padding: 0;
+}
+
+.course-entry {
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: #f3f3f3;
+    color: #800000; /* Echoing the maroon theme */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #a00000;
+    color: white;
 }
