@@ -187,3 +187,26 @@ th {
     background-color: #a00000;
     color: white;
 }
+
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+#firstImage, #secondImage {
+    max-width: 50%; 
+    height: auto; 
+    margin: 0 30px; 
+}
+
+/* Ensures that the login form and images don't overlap */
+#loginForm {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensures the form is above the images */
+}
+
