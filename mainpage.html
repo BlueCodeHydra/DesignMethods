@@ -4,38 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florida Tech Student Help - Main Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/section.css">
+    <link rel="stylesheet" href="./stylesheets/navbar.css">
+
     <script src="js/scripts.js" defer></script>
 </head>
 
-<body>
+<body>   
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="#" style="color: white" onclick="navigate('mainpage')" >Florida Tech Student Help</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="navigate('advisor')">
+                        <img src="./images/Advisor.png" alt="Advisor Icon" class="nav-icon"> Advisor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('courseManagement')">
+                        <img src="./images/Courses.png" alt="course Icon" class="nav-icon"> Course Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('appointment')">
+                    <img src="./images/Appointment.png" alt="Appointment Icon" class="nav-icon"> Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('security')">
+                    <img src="./images/Security.png" alt="security Icon" class="nav-icon"> Security</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('alert')">
+                    <img src="./images/Alert.png" alt="Alert Icon" class="nav-icon"> Alerts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sectionDiv">
+        <h1 style="color:white">Hello and Welcome to the new student services application! 
+            This app is equipped with many tools to help you along your journey as a Panther!
+            Please select a proper service from the navigation bar!
+        </h1>
+    </div>
+
+    <!-- <div id="userInfo" class="container mt-3">
+         User information will be displayed here
+        <textarea id="userInfoText" readonly rows="5" cols="50"></textarea>
+    </div> -->
     
-    <div id="userInfo">
-        <!-- User information will be displayed here -->
-        <textarea id="userInfoText" readonly></textarea>
-    </div>
-    <div id="options">
-        <div class="option" onclick="navigate('advisor')">
-            <img src="images/Advisor.png" alt="Advisor">
-            <p> Advisor</p>
-        </div>
-        <div class="option" onclick="navigate('courseManagement')">
-            <img src="images/Courses.png" alt="Course Management">
-            <p> Course Management</p>
-        </div>
-        <div class="option" onclick="navigate('Appointment')">
-            <img src="images/Appointment.png" alt="Appointment">
-            <p> Appointments</p>
-        </div>
-        <div class="option" onclick="navigate('Security')">
-            <img src="images/Security.png" alt="Security">
-            <p> Security</p>
-        </div>
-        <div class="option" onclick="navigate('alert')">
-            <img src="images/Alert.png" alt="alert">
-            <p> Alerts</p>
-        </div>
-    </div>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

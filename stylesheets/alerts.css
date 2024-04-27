@@ -1,0 +1,70 @@
+.alert-container {
+    display: flex;
+    justify-content: space-around; /* Space out the alert boxes */
+    padding: 20px;
+}
+
+.alert-box {
+    background: #ffffff; /* Light background for contrast */
+    padding: 20px;
+    margin: 10px;
+    width: 30%; /* Each box takes up roughly a third of the container width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+.alert-box h2 {
+    color: #800000; /* Echoing the maroon theme */
+}
+
+.alert-box ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.course-entry {
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: #f3f3f3;
+    color: #800000; /* Echoing the maroon theme */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #a00000;
+    color: white;
+}
+
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+#firstImage, #secondImage {
+    max-width: 50%; 
+    height: auto; 
+    margin: 0 30px; 
+}
+
+/* Ensures that the login form and images don't overlap */
+#loginForm {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensures the form is above the images */
+}
+

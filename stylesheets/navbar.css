@@ -1,0 +1,21 @@
+#navbar {
+	background-color: #4E060A;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adjust the margin between the nav items */
+}
+
+#navbar .nav-link {
+    color: white !important;
+}
+
+#navbar .nav-item:hover {
+    background-color: #2C0002;
+}
+
+#navbar .nav-icon {
+    width: 30px; /* Adjust the width of the icon as needed */
+
+    margin-right: 5px; /* Adjust the spacing between the image and text */
+}

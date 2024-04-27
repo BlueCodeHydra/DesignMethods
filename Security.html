@@ -4,36 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Info</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/section.css">
+    <link rel="stylesheet" href="./stylesheets/navbar.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 
-<div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-        <a href="mainpage.html">Main</a>
-        <a href="CourseManagement.html">Courses</a>
-        <a href="Appointment.html">Appointments</a>
-        <a href="Advisor.html">Advisor</a>
-        <a href="Security.html">Security</a>
-        <a href="alert.html">Alerts</a>
-    </div>
-</div>
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="#" style="color: white" onclick="navigate('mainpage')">Florida Tech Student Help</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="navigate('advisor')">
+                        <img src="./images/Advisor.png" alt="Advisor Icon" class="nav-icon"> Advisor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('courseManagement')">
+                        <img src="./images/Courses.png" alt="course Icon" class="nav-icon"> Course Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('appointment')">
+                    <img src="./images/Appointment.png" alt="Appointment Icon" class="nav-icon"> Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('security')">
+                    <img src="./images/Security.png" alt="security Icon" class="nav-icon"> Security</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="navigate('alert')">
+                    <img src="./images/Alert.png" alt="Alert Icon" class="nav-icon"> Alerts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<body style="background: #800000;">
-    
-    <h1>Security</h1>
-    <form id="reportCrimeForm">
-        <label for="crimeType">Type of Crime:</label>
-        <input type="text" id="crimeType" name="crimeType"><br>
-        
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location"><br>
-        
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time"><br>
-        
-        <input type="button" value="Report Crime" onclick="reportCrime()">
-    </form>
+    <div class="sectionDiv">
+        <h1 class="sectionText">Security</h1>
+        <form id="reportCrimeForm">
+            <label class="sectionText" for="crimeType">Type of Crime:</label>
+            <input type="text" id="crimeType" name="crimeType"><br>
+            
+            <label class="sectionText" for="location">Location:</label>
+            <input type="text" id="location" name="location"><br>
+            
+            <label class="sectionText" for="time">Time:</label>
+            <input type="time" id="time" name="time"><br>
+            
+            <input type="button" value="Report Crime" onclick="reportCrime()">
+        </form>
+    </div>
+
 
     <p><a href="alert.html">Go to Alert Page</a></p>
     <script src="js/securityAlert.js"></script>
