@@ -10,7 +10,7 @@
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand" href="#" style="color: white" onclick="navigate('mainpage')">Florida Tech Student Help</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
                     <a class="nav-link" onclick="navigate('alert')">
                     <img src="./images/Alert.png" alt="Alert Icon" class="nav-icon"> Alerts</a>
                 </li>
-                <li class="nav-item">
+				<li class="nav-item">
                     <a class="nav-link" onclick="navigate('health')">
                     <img src="./images/health.jpg" alt="Health Icon" class="nav-icon"> Health</a>
                 </li>
@@ -50,25 +50,17 @@
     </nav>
 
     <div class="sectionDiv">
-        <h1 style="color: white;">Appointment Scheduling</h1>
-        <table id="appointmentTable">
-            <thead>
-                <tr>
-                    <th class="sectionText">Advisor Name</th>
-                    <th class="sectionText">Date</th>
-                    <th class="sectionText">Time</th>
-                    <th class="sectionText">Reason for Meeting</th>
-                </tr>
-            </thead>
-            <tbody id="appointmentDetails">
-            </tbody>
-        </table>
+        <h1 style="color:white">Welcome to the cultural appreciation tab! Take a look at our upcoming cultural events on the calandar below.
+        </h1>
     </div>
 
+    <div class="sectionDiv">
+        <img style="width: 900px;height: 600px;" src="./images/cultureCal.jpg" alt="culture calandar">
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/alertPageUpdates.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/advisorAppointment.js"></script>
 </body>
-</html>
+</html>	
